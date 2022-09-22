@@ -1,4 +1,4 @@
- /* Copyright 2021 HellSingCoder
+ /* Copyright 2022 Alex Lee
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
@@ -16,9 +16,6 @@
 
 
   #pragma once
-
-
-//#define USE_MATRIX_I2C
 
 /* Select hand configuration */
 
@@ -41,7 +38,8 @@
 #endif
 #define ENCODER_DIRECTION_FLIP
 
-
+#define OLED_TIMEOUT 120000
+#define OLED_BRIGHTNESS 120
 #define RGBLIGHT_SLEEP
 //
 #define RGBLIGHT_LAYERS
