@@ -1,5 +1,5 @@
 SPLIT_KEYBOARD = yes			# Split keyboard
-CONSOLE_ENABLE = no				# Console for debug (+4686)
+CONSOLE_ENABLE = Yes				# Console for debug (+4686)
 BOOTMAGIC_ENABLE = no			# Virtual DIP switch configuration (+644)
 MAGIC_ENABLE = no				# Save space by not PROCESS_MAGIC, which is bootmagic with out the boot (+634)
 GRAVE_ESC_ENABLE = no			# Save space by not using KC_GESC (+127)
