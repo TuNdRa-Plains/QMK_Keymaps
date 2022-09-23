@@ -559,7 +559,13 @@ static void print_status_narrow(void) {
 	}
 #endif
 
+/* Oled Timeout management */
+void oled_timer_reset(void) {
+    oled_timer = timer_read32();
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+	oled_timer_reset();
     switch (keycode) {
         case KC_LOWER:
             if (record->event.pressed) {
@@ -747,20 +753,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 }
-/* Oled Timeout management */
-void oled_timer_reset(void) {
-    oled_timer = timer_read32();
-}
-bool process_record_user_oled(uint16_t keycode, keyrecord_t *record) {
-    if (record->event.pressed) {
-        oled_timer_reset();
-    }
-    return true;
-}
+
 #ifdef ENCODER_ENABLE
 
 bool encoder_update_user(uint8_t index, bool clockwise) {
-	oled_timer = timer_read32();
+	oled_timer_reset();
     if (index == 0) {
         if (clockwise) {
             tap_code(KC_VOLU);
