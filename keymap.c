@@ -740,8 +740,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {
                 isJumping = false;
             }
-        case KC_RSFT:
-        case KC_LSFT:
+        case KC_LSHIFT:
+        case KC_RSHIFT:
             if (record->event.pressed) {
                 isBarking = true;
             } else {
