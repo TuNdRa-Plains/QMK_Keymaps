@@ -27,4 +27,4 @@ Features:
 Learn how to adopt a keyboard pet here
 https://www.youtube.com/watch?v=HgIQRazCAjo
 
-- Incredibly large parts of this are based on code from Drasha, HellCoder & SolarTempest
+- Incredibly large parts of this are based on code from Drasha, HellSingCoder & SolarTempest
