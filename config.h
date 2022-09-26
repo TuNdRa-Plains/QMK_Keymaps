@@ -1,5 +1,6 @@
  /* Copyright 2022 Alex Lee
   * 2021 HellSingCoder
+  * 2021 Dave Evans
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
