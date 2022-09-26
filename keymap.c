@@ -540,12 +540,14 @@ static void print_status_narrow(void) {
 		/* KEYBOARD PET VARIABLES END */
 		
 		
-		if (is_keyboard_master()) { //Drashna's OLED timeout off code for animations
+		if (is_keyboard_master()) { //Drashna's OLED timeout off code for animations, hooking RGBLight on/off for neatness.
 			if (timer_elapsed32(oled_timer) > 30000) {
 				oled_off();
+				rgblight_suspend();
 				return false;
 			} else {
 				oled_on();
+				rgblight_wakeup();
 			}
 		}
 		
