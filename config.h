@@ -44,7 +44,7 @@
 
 // OLED settings
 #ifdef OLED_ENABLE
-	#define OLED_TIMEOUT 6000      		//6000ms - 60 seconds
+	//#define OLED_TIMEOUT 6000      		//6000ms - 60 seconds
 	#define OLED_BRIGHTNESS 90			//Default is 100.
 	#define SPLIT_OLED_ENABLE			//Synx on/off OLED state between halves (+100).
 	#ifdef WPM_ENABLE

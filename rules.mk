@@ -11,7 +11,7 @@ ENCODER_ENABLE = yes			# Rotary encoders (+1112)
 EXTRAKEY_ENABLE = yes			# Audio control and System control (+450)
 MOUSEKEY_ENABLE = no			# Mouse keys (+1482).
 NKRO_ENABLE = no				# 6KRO by default. NKRO works if enabled (+328)
-COMBO_ENABLE = no				# Tap combo chording (+952)
+COMBO_ENABLE = yes				# Tap combo chording (+952)
 
 OLED_ENABLE = yes				# Must be disabled if OLEDs are  not installed (+3608-4774 with pet)
 OLED_DRIVER = SSD1306			# Specify OLED driver

@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | TAB  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  | Bspc |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | CAPS |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
- * |------+------+------+------+------+------| MUTE  |    |DISCORD|------+------+------+------+------+------|
+ * |------+------+------+------+------+------| MUTE  |    | LOCK  |------+------+------+------+------+------|
  * |LSHIFT|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RShift|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *            | LCTRL| WIN  |LALT  |LOWER | /Space  /       \Enter \  |RAISE | APP  | RCTR | DEL  |
@@ -106,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_ESC,   KC_1,   KC_2,     KC_3,    KC_4,    KC_5,                     LT(_SWITCH,KC_6),    KC_7,    KC_8,    KC_9,    KC_0,  KC_GRV,
   LT(_NUMPAD,KC_TAB),KC_Q,KC_W,KC_E,   KC_R,    KC_T,                     KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  KC_BSPC,
   KC_CAPS,   KC_A,   KC_S,    KC_D,    KC_F,    KC_G,                     KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,  KC_QUOT,
-  SFT_T(KC_NUBS),KC_Z,KC_X,KC_C,KC_V,    KC_B, KC_MUTE,  KC_SYSLOCK ,KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_RSFT,
+  SFT_T(KC_NUBS),KC_Z,KC_X,KC_C,KC_V,    KC_B, KC_MUTE,  KC_RWIN ,KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_RSFT,
                  KC_LCTL, KC_LGUI,KC_LALT, KC_LOWER, KC_SPACE,      KC_ENT,  KC_RAISE, KC_APP, KC_RCTL, KC_DEL
 ),
 
@@ -546,11 +546,11 @@ static void print_status_narrow(void) {
 		if (is_keyboard_master()) { //Drashna's OLED timeout off code for animations
 			if (timer_elapsed32(oled_timer) > 30000) {
 				oled_off();
-				rgblight_disable_noeeprom();
+				//rgblight_disable_noeeprom();
 				return false;
 			} else {
 				oled_on();
-				rgblight_enable_noeeprom();
+				//rgblight_enable_noeeprom();
 			}
 		}
 		
@@ -716,15 +716,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 unregister_code(KC_Z);
             }
             return false;
+			break;
         case KC_SYSLOCK:
 	        if (record->event.pressed) {
-				register_mods(mod_config(MOD_LGUI));
+				register_mods(mod_config(MOD_RGUI));
 				register_code(KC_L);
 			} else {
 				unregister_mods(mod_config(MOD_LGUI));
 				unregister_code(KC_L);				
 			}
             return false;
+			break;
             /* LAYER */
 
         case KC_LAYER:
