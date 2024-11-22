@@ -5,8 +5,7 @@
 Generated with RyanIsCool's [Cosmos Keyboard Generator](https://ryanis.cool/cosmos/beta#cm:CrUBCg8SBRCAPyAnEgASABIAOEUKDxIFEIBLICcSABIAEgA4MQocEgUQgFcgJxIAEgASAxCwLxIDELBfOB1AivC8AgoXEgUQgGMgJxIAEgASAxCwOxIDELBrOAkKFRIFEIBvICcSABIAEgA4CkCGhorABwofEgIgJxIAEgcQoE5AgIAIEgYQMECAgAg4HkCQhoqwBwoSEgIgJxIAEgASADgyQJqGirAHGABA+ouAr5CSAUjejKvAAQpnCgoSBRBAUPICOMAMCgsSBhDAgAIgKDioFAoJEgQQQCAoOJAcCgsSBhBAIChAADj4IwoYEhIQQCAAMMgBQICAgA1IgICwrAEwFjgAGAoiCgjIARDIARgAIABA25GknPA3SISPlNageAqSAQoXEhMQwMACQICEkAJIwpmclaC8AVBDOAcKFRIQEEBAgIAYSNCV/Nyg9QNQC1CdAgoWEhIQQECEjNQCSMKZnJWgvAFQhgFQOQoVEhAQQECEhPABSOaZgKygC1BXUIABChUSEBBAQIWMrANI8JnQteAwUHRQlgEYAyIJCNIBENIBIMIDQMyLhKTQMUitkeCNsZMGEAYYgiAiBgjcARDXATgGggECBAJoAA==)
 
 * Keyboard Maintainer: [TuNdRa_plains](https://github.com/TuNdRa_plains)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Hardware Supported: SeaPicro RP2040
 
 Make example for this keyboard (after setting up your build environment):
 
